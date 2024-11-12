@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/selected.tsx"],
+  "sourcesContent": ["import { getPreferenceValues, launchCommand, LaunchProps, LaunchType } from \"@raycast/api\";\nimport { TranslateMode } from \"./providers/types\";\n\n/* eslint-disable @typescript-eslint/no-unused-vars */\nexport default async function Command(props: LaunchProps) {\n  const { mode } = getPreferenceValues<{ mode: TranslateMode }>();\n\n  await launchCommand({\n    name: mode,\n    type: LaunchType.UserInitiated,\n    context: {\n      mode,\n      autoStart: true,\n      loadSelected: true,\n      loadClipboard: false,\n    },\n  });\n}\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAA4E,wBAI5E,eAAOF,EAA+BG,EAAoB,CACxD,GAAM,CAAE,KAAAC,CAAK,KAAI,uBAA6C,EAE9D,QAAM,iBAAc,CAClB,KAAMA,EACN,KAAM,aAAW,cACjB,QAAS,CACP,KAAAA,EACA,UAAW,GACX,aAAc,GACd,cAAe,EACjB,CACF,CAAC,CACH",
+  "names": ["selected_exports", "__export", "Command", "__toCommonJS", "import_api", "props", "mode"]
+}
